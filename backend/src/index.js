@@ -1,12 +1,21 @@
-const express=require("express");
-const dotenv=require("dotenv");
-const cookieParser=require("cookie-parser");
-const authRoutes=require("./routes/auth.routes.js");
-const messageRoutes=require("./routes/message.routes.js");
-const { connectDB } = require("./lib/db.js");
-const cors=require("cors");
-const {path }=require("path");
-const {app,server} =require("./lib/socket.js");
+import express from "express";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
+import authRoutes from "./routes/auth.routes.js";
+import messageRoutes from "./routes/message.routes.js";
+import { connectDB } from "./lib/db.js";
+import cors from "cors";
+import { path } from "path";
+import { app, server } from "./lib/socket.js";
+
+// const cookieParser=require("cookie-parser");
+// const authRoutes=require("./routes/auth.routes.js");
+// const messageRoutes=require("./routes/message.routes.js");
+// const { connectDB } = require("./lib/db.js");
+// const cors=require("cors");
+// const {path }=require("path");
+// const {app,server} =require("./lib/socket.js");
 
 
 

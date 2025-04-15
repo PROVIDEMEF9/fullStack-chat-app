@@ -1,8 +1,10 @@
-const jwt =require("jsonwebtoken");
-const { User } = require("../models/user.model");
+import jwt from "jsonwebtoken";
+import { User } from "../models/user.model.js";
+// const jwt =require("jsonwebtoken");
+// const { User } = require("../models/user.model");
 
 
- const protectRoute = async (req, res, next) => {
+ export const protectRoute = async (req, res, next) => {
     try {
         
       const token = req.cookies.jwt;
@@ -33,7 +35,3 @@ const { User } = require("../models/user.model");
       res.status(500).json({ message: "Internal server error" });
     }
   };
-
-module.exports={
-    protectRoute,
-}

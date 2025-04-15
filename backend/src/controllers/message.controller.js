@@ -1,5 +1,5 @@
-import { Message } from "../models/message.model";
-import { User } from "../models/user.model";
+import { Message } from "../models/message.model.js";
+import { User } from "../models/user.model.js";
 import { cloudinary } from "../lib/cloudinary";
 import { getReceiverSocketId, io } from "../lib/socket";
 // const { Message } = require("../models/message.model");
